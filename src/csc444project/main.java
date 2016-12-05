@@ -10,7 +10,7 @@ import java.io.IOException;
 
 public class main {
 
-    static final String FILE_NAME = "/Users/jason/sample.java"; // File name goes here
+    static final String FILE_NAME = "/Users/jason/newsample.java"; // File name goes here
 
 
     public static void main(String[] args) {

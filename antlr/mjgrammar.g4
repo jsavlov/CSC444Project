@@ -61,7 +61,7 @@ tuple_type
     ;
 
 type_dec_a
-    : type_dec tuple_type
+    : tuple_type
     ;
 
 statement

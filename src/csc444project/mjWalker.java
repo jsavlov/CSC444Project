@@ -119,6 +119,20 @@ public class mjWalker extends mjgrammarBaseListener {
     public void enterVar_dec(mjgrammarParser.Var_decContext ctx) {
         super.enterVar_dec(ctx);
         System.out.println("Declaring a variable...");
+        String var_type = ctx.type_dec().getText();
+        String var_name = ctx.var_name().getText();
+
+        System.out.println("New variable -- name: " + var_name + ", type: " + var_type);
+        mjVar newVar = new mjVar(var_type, var_name);
+        if (currentMethod != null) {
+            // Add a method variable
+            newVar.setParentMethod(currentMethod);
+            currentMethod.addVar(newVar);
+        } else if (currentClass != null) {
+            // Add a class variable
+            newVar.setParentClass(currentClass);
+            currentClass.addVar(newVar);
+        }
     }
 
     @Override
@@ -142,8 +156,15 @@ public class mjWalker extends mjgrammarBaseListener {
         System.out.println("Entering method dec...");
 
         String methodName, methodReturnType;
-        if (ctx.method_type_dec() != null) {
+        if (ctx.method_type_dec().type_dec().type() != null) {
             methodReturnType = ctx.method_type_dec().type_dec().type().getText();
+            methodName = ctx.method_type_dec().method_name().getText();
+            currentMethod = new mjMethod(methodName, methodReturnType, currentClass);
+            System.out.println("Created new method " + currentMethod.getName() + " w/ return type " + currentMethod.getReturnType() + " belonging to class " + currentMethod.getMethodClass().getName());
+        }
+        else if (ctx.method_type_dec().type_dec().tuple_type() != null) {
+            System.out.println("tuple type");
+            methodReturnType = ctx.method_type_dec().type_dec().tuple_type().getText();
             methodName = ctx.method_type_dec().method_name().getText();
             currentMethod = new mjMethod(methodName, methodReturnType, currentClass);
             System.out.println("Created new method " + currentMethod.getName() + " w/ return type " + currentMethod.getReturnType() + " belonging to class " + currentMethod.getMethodClass().getName());
@@ -154,6 +175,7 @@ public class mjWalker extends mjgrammarBaseListener {
     @Override
     public void exitMethod_dec(mjgrammarParser.Method_decContext ctx) {
         super.exitMethod_dec(ctx);
+        currentMethod = null;
     }
 
     @Override

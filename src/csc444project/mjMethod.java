@@ -3,9 +3,7 @@ package csc444project;
 import java.util.HashMap;
 import java.util.Map;
 
-/**
- * Created by jason on 12/4/16.
- */
+
 public class mjMethod {
 
     private final Map<String, mjVar> varMap = new HashMap<String, mjVar>();
@@ -25,6 +23,10 @@ public class mjMethod {
         this.name = n;
         this.returnType = rt;
         this.methodClass = c;
+    }
+
+    public void addVar(mjVar var) {
+        varMap.put(var.getName(), var);
     }
 
     public String getName() {

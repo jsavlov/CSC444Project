@@ -10,20 +10,37 @@ goal
 	;
 
 main_class_dec
-	: 'class' ID '{' 'public' 'static' 'void' 'main' '(' 'String' '[' ']' ID ')'  statement '}'
+	: 'class' main_class_name '{' 'public' 'static' 'void' 'main' '(' 'String' '[' ']' main_class_param ')'  statement '}'
 	;
 
+main_class_name: ID ;
+
+main_class_param: ID;
+
 class_dec
-    : 'class' ID ( 'extends' ID )? '{' ( var_dec )* ( method_dec )* '}'
+    : 'class' class_name ( 'extends' superclass_name )? '{' ( var_dec )* ( method_dec )* '}'
     ;
+
+class_name: ID;
+superclass_name: ID;
 
 var_dec
-    : type_dec ID ';'
+    : type_dec var_name ';'
     ;
 
+var_name : ID ;
+
 method_dec
-    : 'public' type_dec ID '(' ( type_dec ID ( ',' type_dec ID )* )? ')' '{' ( var_dec )* ( statement )* 'return' evaluation ';' '}'
+    : 'public' method_type_dec '(' ( method_param_dec ( ',' method_param_dec )* )? ')' '{' ( var_dec )* ( statement )* 'return' evaluation ';' '}'
     ;
+
+method_type_dec : type_dec method_name ;
+
+method_name : ID ;
+
+method_param_dec : type_dec method_param_name ;
+
+method_param_name : ID ;
 
 type
     : 'int' '[' ']'
@@ -61,9 +78,12 @@ statement_1
     ;
 
 evaluation
-    : evaluation_1 ('&&' | '<' | '+' | '-' | '*') evaluation_1
+    : boolean_evaluation
     | evaluation_1
     ;
+
+boolean_evaluation:
+    evaluation_1 ('&&' | '<' | '+' | '-' | '*') evaluation_1 ;
 
 evaluation_1
     : evaluation_2 evaluation_1a
@@ -115,7 +135,7 @@ evaluation_6
     ;
 
 evaluation_6a
-    : 'new' 'int' '[' evaluation ']'
+    : 'new' 'int' '[' INT_LIT ']'
     |
     ;
 

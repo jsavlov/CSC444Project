@@ -1,4 +1,5 @@
-// Generated from /Users/jason/Documents/CSC444Project/src/mjgrammar.g4 by ANTLR 4.5.3
+// Generated from /Users/jason/Documents/CSC444Project/antlr/mjgrammar.g4 by ANTLR 4.5.3
+package csc444project;
 
 import org.antlr.v4.runtime.ParserRuleContext;
 import org.antlr.v4.runtime.tree.ErrorNode;
@@ -39,6 +40,30 @@ public class mjgrammarBaseListener implements mjgrammarListener {
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
+	@Override public void enterMain_class_name(mjgrammarParser.Main_class_nameContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void exitMain_class_name(mjgrammarParser.Main_class_nameContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void enterMain_class_param(mjgrammarParser.Main_class_paramContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void exitMain_class_param(mjgrammarParser.Main_class_paramContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
 	@Override public void enterClass_dec(mjgrammarParser.Class_decContext ctx) { }
 	/**
 	 * {@inheritDoc}
@@ -46,6 +71,30 @@ public class mjgrammarBaseListener implements mjgrammarListener {
 	 * <p>The default implementation does nothing.</p>
 	 */
 	@Override public void exitClass_dec(mjgrammarParser.Class_decContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void enterClass_name(mjgrammarParser.Class_nameContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void exitClass_name(mjgrammarParser.Class_nameContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void enterSuperclass_name(mjgrammarParser.Superclass_nameContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void exitSuperclass_name(mjgrammarParser.Superclass_nameContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
@@ -63,6 +112,18 @@ public class mjgrammarBaseListener implements mjgrammarListener {
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
+	@Override public void enterVar_name(mjgrammarParser.Var_nameContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void exitVar_name(mjgrammarParser.Var_nameContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
 	@Override public void enterMethod_dec(mjgrammarParser.Method_decContext ctx) { }
 	/**
 	 * {@inheritDoc}
@@ -70,6 +131,54 @@ public class mjgrammarBaseListener implements mjgrammarListener {
 	 * <p>The default implementation does nothing.</p>
 	 */
 	@Override public void exitMethod_dec(mjgrammarParser.Method_decContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void enterMethod_type_dec(mjgrammarParser.Method_type_decContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void exitMethod_type_dec(mjgrammarParser.Method_type_decContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void enterMethod_name(mjgrammarParser.Method_nameContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void exitMethod_name(mjgrammarParser.Method_nameContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void enterMethod_param_dec(mjgrammarParser.Method_param_decContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void exitMethod_param_dec(mjgrammarParser.Method_param_decContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void enterMethod_param_name(mjgrammarParser.Method_param_nameContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void exitMethod_param_name(mjgrammarParser.Method_param_nameContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
@@ -154,6 +263,18 @@ public class mjgrammarBaseListener implements mjgrammarListener {
 	 * <p>The default implementation does nothing.</p>
 	 */
 	@Override public void exitEvaluation(mjgrammarParser.EvaluationContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void enterBoolean_evaluation(mjgrammarParser.Boolean_evaluationContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void exitBoolean_evaluation(mjgrammarParser.Boolean_evaluationContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *

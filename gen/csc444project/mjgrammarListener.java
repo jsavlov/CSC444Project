@@ -1,4 +1,5 @@
-// Generated from /Users/jason/Documents/CSC444Project/src/mjgrammar.g4 by ANTLR 4.5.3
+// Generated from /Users/jason/Documents/CSC444Project/antlr/mjgrammar.g4 by ANTLR 4.5.3
+package csc444project;
 import org.antlr.v4.runtime.tree.ParseTreeListener;
 
 /**
@@ -27,6 +28,26 @@ public interface mjgrammarListener extends ParseTreeListener {
 	 */
 	void exitMain_class_dec(mjgrammarParser.Main_class_decContext ctx);
 	/**
+	 * Enter a parse tree produced by {@link mjgrammarParser#main_class_name}.
+	 * @param ctx the parse tree
+	 */
+	void enterMain_class_name(mjgrammarParser.Main_class_nameContext ctx);
+	/**
+	 * Exit a parse tree produced by {@link mjgrammarParser#main_class_name}.
+	 * @param ctx the parse tree
+	 */
+	void exitMain_class_name(mjgrammarParser.Main_class_nameContext ctx);
+	/**
+	 * Enter a parse tree produced by {@link mjgrammarParser#main_class_param}.
+	 * @param ctx the parse tree
+	 */
+	void enterMain_class_param(mjgrammarParser.Main_class_paramContext ctx);
+	/**
+	 * Exit a parse tree produced by {@link mjgrammarParser#main_class_param}.
+	 * @param ctx the parse tree
+	 */
+	void exitMain_class_param(mjgrammarParser.Main_class_paramContext ctx);
+	/**
 	 * Enter a parse tree produced by {@link mjgrammarParser#class_dec}.
 	 * @param ctx the parse tree
 	 */
@@ -36,6 +57,26 @@ public interface mjgrammarListener extends ParseTreeListener {
 	 * @param ctx the parse tree
 	 */
 	void exitClass_dec(mjgrammarParser.Class_decContext ctx);
+	/**
+	 * Enter a parse tree produced by {@link mjgrammarParser#class_name}.
+	 * @param ctx the parse tree
+	 */
+	void enterClass_name(mjgrammarParser.Class_nameContext ctx);
+	/**
+	 * Exit a parse tree produced by {@link mjgrammarParser#class_name}.
+	 * @param ctx the parse tree
+	 */
+	void exitClass_name(mjgrammarParser.Class_nameContext ctx);
+	/**
+	 * Enter a parse tree produced by {@link mjgrammarParser#superclass_name}.
+	 * @param ctx the parse tree
+	 */
+	void enterSuperclass_name(mjgrammarParser.Superclass_nameContext ctx);
+	/**
+	 * Exit a parse tree produced by {@link mjgrammarParser#superclass_name}.
+	 * @param ctx the parse tree
+	 */
+	void exitSuperclass_name(mjgrammarParser.Superclass_nameContext ctx);
 	/**
 	 * Enter a parse tree produced by {@link mjgrammarParser#var_dec}.
 	 * @param ctx the parse tree
@@ -47,6 +88,16 @@ public interface mjgrammarListener extends ParseTreeListener {
 	 */
 	void exitVar_dec(mjgrammarParser.Var_decContext ctx);
 	/**
+	 * Enter a parse tree produced by {@link mjgrammarParser#var_name}.
+	 * @param ctx the parse tree
+	 */
+	void enterVar_name(mjgrammarParser.Var_nameContext ctx);
+	/**
+	 * Exit a parse tree produced by {@link mjgrammarParser#var_name}.
+	 * @param ctx the parse tree
+	 */
+	void exitVar_name(mjgrammarParser.Var_nameContext ctx);
+	/**
 	 * Enter a parse tree produced by {@link mjgrammarParser#method_dec}.
 	 * @param ctx the parse tree
 	 */
@@ -56,6 +107,46 @@ public interface mjgrammarListener extends ParseTreeListener {
 	 * @param ctx the parse tree
 	 */
 	void exitMethod_dec(mjgrammarParser.Method_decContext ctx);
+	/**
+	 * Enter a parse tree produced by {@link mjgrammarParser#method_type_dec}.
+	 * @param ctx the parse tree
+	 */
+	void enterMethod_type_dec(mjgrammarParser.Method_type_decContext ctx);
+	/**
+	 * Exit a parse tree produced by {@link mjgrammarParser#method_type_dec}.
+	 * @param ctx the parse tree
+	 */
+	void exitMethod_type_dec(mjgrammarParser.Method_type_decContext ctx);
+	/**
+	 * Enter a parse tree produced by {@link mjgrammarParser#method_name}.
+	 * @param ctx the parse tree
+	 */
+	void enterMethod_name(mjgrammarParser.Method_nameContext ctx);
+	/**
+	 * Exit a parse tree produced by {@link mjgrammarParser#method_name}.
+	 * @param ctx the parse tree
+	 */
+	void exitMethod_name(mjgrammarParser.Method_nameContext ctx);
+	/**
+	 * Enter a parse tree produced by {@link mjgrammarParser#method_param_dec}.
+	 * @param ctx the parse tree
+	 */
+	void enterMethod_param_dec(mjgrammarParser.Method_param_decContext ctx);
+	/**
+	 * Exit a parse tree produced by {@link mjgrammarParser#method_param_dec}.
+	 * @param ctx the parse tree
+	 */
+	void exitMethod_param_dec(mjgrammarParser.Method_param_decContext ctx);
+	/**
+	 * Enter a parse tree produced by {@link mjgrammarParser#method_param_name}.
+	 * @param ctx the parse tree
+	 */
+	void enterMethod_param_name(mjgrammarParser.Method_param_nameContext ctx);
+	/**
+	 * Exit a parse tree produced by {@link mjgrammarParser#method_param_name}.
+	 * @param ctx the parse tree
+	 */
+	void exitMethod_param_name(mjgrammarParser.Method_param_nameContext ctx);
 	/**
 	 * Enter a parse tree produced by {@link mjgrammarParser#type}.
 	 * @param ctx the parse tree
@@ -126,6 +217,16 @@ public interface mjgrammarListener extends ParseTreeListener {
 	 * @param ctx the parse tree
 	 */
 	void exitEvaluation(mjgrammarParser.EvaluationContext ctx);
+	/**
+	 * Enter a parse tree produced by {@link mjgrammarParser#boolean_evaluation}.
+	 * @param ctx the parse tree
+	 */
+	void enterBoolean_evaluation(mjgrammarParser.Boolean_evaluationContext ctx);
+	/**
+	 * Exit a parse tree produced by {@link mjgrammarParser#boolean_evaluation}.
+	 * @param ctx the parse tree
+	 */
+	void exitBoolean_evaluation(mjgrammarParser.Boolean_evaluationContext ctx);
 	/**
 	 * Enter a parse tree produced by {@link mjgrammarParser#evaluation_1}.
 	 * @param ctx the parse tree

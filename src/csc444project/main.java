@@ -1,3 +1,4 @@
+package csc444project;
 
 import org.antlr.v4.runtime.*;
 import org.antlr.v4.runtime.tree.ParseTree;
@@ -5,7 +6,6 @@ import org.antlr.v4.runtime.tree.ParseTreeWalker;
 
 import java.io.FileInputStream;
 import java.io.IOException;
-import java.io.InputStream;
 
 
 public class main {
@@ -34,8 +34,6 @@ public class main {
         ParseTree tree = parser.goal();
         ParseTreeWalker walker = new ParseTreeWalker();
         walker.walk(new mjWalker(), tree);
-
-
 
 
 

@@ -100,6 +100,30 @@ public class mjgrammarBaseListener implements mjgrammarListener {
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
+	@Override public void enterField_dec(mjgrammarParser.Field_decContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void exitField_dec(mjgrammarParser.Field_decContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void enterLocal_dec(mjgrammarParser.Local_decContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void exitLocal_dec(mjgrammarParser.Local_decContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
 	@Override public void enterVar_dec(mjgrammarParser.Var_decContext ctx) { }
 	/**
 	 * {@inheritDoc}
@@ -131,6 +155,42 @@ public class mjgrammarBaseListener implements mjgrammarListener {
 	 * <p>The default implementation does nothing.</p>
 	 */
 	@Override public void exitMethod_dec(mjgrammarParser.Method_decContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void enterParam_list(mjgrammarParser.Param_listContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void exitParam_list(mjgrammarParser.Param_listContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void enterMethod_body(mjgrammarParser.Method_bodyContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void exitMethod_body(mjgrammarParser.Method_bodyContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void enterReturn_statement(mjgrammarParser.Return_statementContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void exitReturn_statement(mjgrammarParser.Return_statementContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
@@ -220,18 +280,6 @@ public class mjgrammarBaseListener implements mjgrammarListener {
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void enterType_dec_a(mjgrammarParser.Type_dec_aContext ctx) { }
-	/**
-	 * {@inheritDoc}
-	 *
-	 * <p>The default implementation does nothing.</p>
-	 */
-	@Override public void exitType_dec_a(mjgrammarParser.Type_dec_aContext ctx) { }
-	/**
-	 * {@inheritDoc}
-	 *
-	 * <p>The default implementation does nothing.</p>
-	 */
 	@Override public void enterStatement(mjgrammarParser.StatementContext ctx) { }
 	/**
 	 * {@inheritDoc}
@@ -244,241 +292,325 @@ public class mjgrammarBaseListener implements mjgrammarListener {
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void enterStatement_1(mjgrammarParser.Statement_1Context ctx) { }
+	@Override public void enterIf_statement(mjgrammarParser.If_statementContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void exitStatement_1(mjgrammarParser.Statement_1Context ctx) { }
+	@Override public void exitIf_statement(mjgrammarParser.If_statementContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void enterEvaluation(mjgrammarParser.EvaluationContext ctx) { }
+	@Override public void enterWhile_loop(mjgrammarParser.While_loopContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void exitEvaluation(mjgrammarParser.EvaluationContext ctx) { }
+	@Override public void exitWhile_loop(mjgrammarParser.While_loopContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void enterBoolean_evaluation(mjgrammarParser.Boolean_evaluationContext ctx) { }
+	@Override public void enterPrintln_statement(mjgrammarParser.Println_statementContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void exitBoolean_evaluation(mjgrammarParser.Boolean_evaluationContext ctx) { }
+	@Override public void exitPrintln_statement(mjgrammarParser.Println_statementContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void enterEvaluation_1(mjgrammarParser.Evaluation_1Context ctx) { }
+	@Override public void enterVar_eval(mjgrammarParser.Var_evalContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void exitEvaluation_1(mjgrammarParser.Evaluation_1Context ctx) { }
+	@Override public void exitVar_eval(mjgrammarParser.Var_evalContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void enterEvaluation_1a(mjgrammarParser.Evaluation_1aContext ctx) { }
+	@Override public void enterArray_eval(mjgrammarParser.Array_evalContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void exitEvaluation_1a(mjgrammarParser.Evaluation_1aContext ctx) { }
+	@Override public void exitArray_eval(mjgrammarParser.Array_evalContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void enterEvaluation_2(mjgrammarParser.Evaluation_2Context ctx) { }
+	@Override public void enterIf_block(mjgrammarParser.If_blockContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void exitEvaluation_2(mjgrammarParser.Evaluation_2Context ctx) { }
+	@Override public void exitIf_block(mjgrammarParser.If_blockContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void enterEvaluation_2a(mjgrammarParser.Evaluation_2aContext ctx) { }
+	@Override public void enterElse_block(mjgrammarParser.Else_blockContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void exitEvaluation_2a(mjgrammarParser.Evaluation_2aContext ctx) { }
+	@Override public void exitElse_block(mjgrammarParser.Else_blockContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void enterEvaluation_3(mjgrammarParser.Evaluation_3Context ctx) { }
+	@Override public void enterWhile_block(mjgrammarParser.While_blockContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void exitEvaluation_3(mjgrammarParser.Evaluation_3Context ctx) { }
+	@Override public void exitWhile_block(mjgrammarParser.While_blockContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void enterEvaluation_3a(mjgrammarParser.Evaluation_3aContext ctx) { }
+	@Override public void enterTuple_var_expr(mjgrammarParser.Tuple_var_exprContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void exitEvaluation_3a(mjgrammarParser.Evaluation_3aContext ctx) { }
+	@Override public void exitTuple_var_expr(mjgrammarParser.Tuple_var_exprContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void enterEvaluation_4(mjgrammarParser.Evaluation_4Context ctx) { }
+	@Override public void enterNew_object_expr(mjgrammarParser.New_object_exprContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void exitEvaluation_4(mjgrammarParser.Evaluation_4Context ctx) { }
+	@Override public void exitNew_object_expr(mjgrammarParser.New_object_exprContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void enterEvaluation_4a(mjgrammarParser.Evaluation_4aContext ctx) { }
+	@Override public void enterParentheses_expr(mjgrammarParser.Parentheses_exprContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void exitEvaluation_4a(mjgrammarParser.Evaluation_4aContext ctx) { }
+	@Override public void exitParentheses_expr(mjgrammarParser.Parentheses_exprContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void enterEvaluation_5(mjgrammarParser.Evaluation_5Context ctx) { }
+	@Override public void enterId_expr(mjgrammarParser.Id_exprContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void exitEvaluation_5(mjgrammarParser.Evaluation_5Context ctx) { }
+	@Override public void exitId_expr(mjgrammarParser.Id_exprContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void enterEvaluation_5a(mjgrammarParser.Evaluation_5aContext ctx) { }
+	@Override public void enterThis_expr(mjgrammarParser.This_exprContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void exitEvaluation_5a(mjgrammarParser.Evaluation_5aContext ctx) { }
+	@Override public void exitThis_expr(mjgrammarParser.This_exprContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void enterEvaluation_6(mjgrammarParser.Evaluation_6Context ctx) { }
+	@Override public void enterPlus_expr(mjgrammarParser.Plus_exprContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void exitEvaluation_6(mjgrammarParser.Evaluation_6Context ctx) { }
+	@Override public void exitPlus_expr(mjgrammarParser.Plus_exprContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void enterEvaluation_6a(mjgrammarParser.Evaluation_6aContext ctx) { }
+	@Override public void enterMult_expr(mjgrammarParser.Mult_exprContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void exitEvaluation_6a(mjgrammarParser.Evaluation_6aContext ctx) { }
+	@Override public void exitMult_expr(mjgrammarParser.Mult_exprContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void enterEvaluation_7(mjgrammarParser.Evaluation_7Context ctx) { }
+	@Override public void enterNot_expr(mjgrammarParser.Not_exprContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void exitEvaluation_7(mjgrammarParser.Evaluation_7Context ctx) { }
+	@Override public void exitNot_expr(mjgrammarParser.Not_exprContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void enterEvaluation_7a(mjgrammarParser.Evaluation_7aContext ctx) { }
+	@Override public void enterBool_lit_expr(mjgrammarParser.Bool_lit_exprContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void exitEvaluation_7a(mjgrammarParser.Evaluation_7aContext ctx) { }
+	@Override public void exitBool_lit_expr(mjgrammarParser.Bool_lit_exprContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void enterEvaluation_8(mjgrammarParser.Evaluation_8Context ctx) { }
+	@Override public void enterLt_expr(mjgrammarParser.Lt_exprContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void exitEvaluation_8(mjgrammarParser.Evaluation_8Context ctx) { }
+	@Override public void exitLt_expr(mjgrammarParser.Lt_exprContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void enterEvaluation_8a(mjgrammarParser.Evaluation_8aContext ctx) { }
+	@Override public void enterAnd_expr(mjgrammarParser.And_exprContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void exitEvaluation_8a(mjgrammarParser.Evaluation_8aContext ctx) { }
+	@Override public void exitAnd_expr(mjgrammarParser.And_exprContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void enterEvaluation_9(mjgrammarParser.Evaluation_9Context ctx) { }
+	@Override public void enterArray_size_expr(mjgrammarParser.Array_size_exprContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void exitEvaluation_9(mjgrammarParser.Evaluation_9Context ctx) { }
+	@Override public void exitArray_size_expr(mjgrammarParser.Array_size_exprContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void enterArray_instantiation_expr(mjgrammarParser.Array_instantiation_exprContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void exitArray_instantiation_expr(mjgrammarParser.Array_instantiation_exprContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void enterInt_lit_expr(mjgrammarParser.Int_lit_exprContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void exitInt_lit_expr(mjgrammarParser.Int_lit_exprContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void enterMethod_call_expr(mjgrammarParser.Method_call_exprContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void exitMethod_call_expr(mjgrammarParser.Method_call_exprContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void enterMinus_expr(mjgrammarParser.Minus_exprContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void exitMinus_expr(mjgrammarParser.Minus_exprContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void enterTuple_return_expr(mjgrammarParser.Tuple_return_exprContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void exitTuple_return_expr(mjgrammarParser.Tuple_return_exprContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void enterArray_acces_expr(mjgrammarParser.Array_acces_exprContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void exitArray_acces_expr(mjgrammarParser.Array_acces_exprContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void enterBoolean_literal(mjgrammarParser.Boolean_literalContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void exitBoolean_literal(mjgrammarParser.Boolean_literalContext ctx) { }
 
 	/**
 	 * {@inheritDoc}

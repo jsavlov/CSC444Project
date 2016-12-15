@@ -78,6 +78,26 @@ public interface mjgrammarListener extends ParseTreeListener {
 	 */
 	void exitSuperclass_name(mjgrammarParser.Superclass_nameContext ctx);
 	/**
+	 * Enter a parse tree produced by {@link mjgrammarParser#field_dec}.
+	 * @param ctx the parse tree
+	 */
+	void enterField_dec(mjgrammarParser.Field_decContext ctx);
+	/**
+	 * Exit a parse tree produced by {@link mjgrammarParser#field_dec}.
+	 * @param ctx the parse tree
+	 */
+	void exitField_dec(mjgrammarParser.Field_decContext ctx);
+	/**
+	 * Enter a parse tree produced by {@link mjgrammarParser#local_dec}.
+	 * @param ctx the parse tree
+	 */
+	void enterLocal_dec(mjgrammarParser.Local_decContext ctx);
+	/**
+	 * Exit a parse tree produced by {@link mjgrammarParser#local_dec}.
+	 * @param ctx the parse tree
+	 */
+	void exitLocal_dec(mjgrammarParser.Local_decContext ctx);
+	/**
 	 * Enter a parse tree produced by {@link mjgrammarParser#var_dec}.
 	 * @param ctx the parse tree
 	 */
@@ -107,6 +127,36 @@ public interface mjgrammarListener extends ParseTreeListener {
 	 * @param ctx the parse tree
 	 */
 	void exitMethod_dec(mjgrammarParser.Method_decContext ctx);
+	/**
+	 * Enter a parse tree produced by {@link mjgrammarParser#param_list}.
+	 * @param ctx the parse tree
+	 */
+	void enterParam_list(mjgrammarParser.Param_listContext ctx);
+	/**
+	 * Exit a parse tree produced by {@link mjgrammarParser#param_list}.
+	 * @param ctx the parse tree
+	 */
+	void exitParam_list(mjgrammarParser.Param_listContext ctx);
+	/**
+	 * Enter a parse tree produced by {@link mjgrammarParser#method_body}.
+	 * @param ctx the parse tree
+	 */
+	void enterMethod_body(mjgrammarParser.Method_bodyContext ctx);
+	/**
+	 * Exit a parse tree produced by {@link mjgrammarParser#method_body}.
+	 * @param ctx the parse tree
+	 */
+	void exitMethod_body(mjgrammarParser.Method_bodyContext ctx);
+	/**
+	 * Enter a parse tree produced by {@link mjgrammarParser#return_statement}.
+	 * @param ctx the parse tree
+	 */
+	void enterReturn_statement(mjgrammarParser.Return_statementContext ctx);
+	/**
+	 * Exit a parse tree produced by {@link mjgrammarParser#return_statement}.
+	 * @param ctx the parse tree
+	 */
+	void exitReturn_statement(mjgrammarParser.Return_statementContext ctx);
 	/**
 	 * Enter a parse tree produced by {@link mjgrammarParser#method_type_dec}.
 	 * @param ctx the parse tree
@@ -178,16 +228,6 @@ public interface mjgrammarListener extends ParseTreeListener {
 	 */
 	void exitTuple_type(mjgrammarParser.Tuple_typeContext ctx);
 	/**
-	 * Enter a parse tree produced by {@link mjgrammarParser#type_dec_a}.
-	 * @param ctx the parse tree
-	 */
-	void enterType_dec_a(mjgrammarParser.Type_dec_aContext ctx);
-	/**
-	 * Exit a parse tree produced by {@link mjgrammarParser#type_dec_a}.
-	 * @param ctx the parse tree
-	 */
-	void exitType_dec_a(mjgrammarParser.Type_dec_aContext ctx);
-	/**
 	 * Enter a parse tree produced by {@link mjgrammarParser#statement}.
 	 * @param ctx the parse tree
 	 */
@@ -198,203 +238,307 @@ public interface mjgrammarListener extends ParseTreeListener {
 	 */
 	void exitStatement(mjgrammarParser.StatementContext ctx);
 	/**
-	 * Enter a parse tree produced by {@link mjgrammarParser#statement_1}.
+	 * Enter a parse tree produced by {@link mjgrammarParser#if_statement}.
 	 * @param ctx the parse tree
 	 */
-	void enterStatement_1(mjgrammarParser.Statement_1Context ctx);
+	void enterIf_statement(mjgrammarParser.If_statementContext ctx);
 	/**
-	 * Exit a parse tree produced by {@link mjgrammarParser#statement_1}.
+	 * Exit a parse tree produced by {@link mjgrammarParser#if_statement}.
 	 * @param ctx the parse tree
 	 */
-	void exitStatement_1(mjgrammarParser.Statement_1Context ctx);
+	void exitIf_statement(mjgrammarParser.If_statementContext ctx);
 	/**
-	 * Enter a parse tree produced by {@link mjgrammarParser#evaluation}.
+	 * Enter a parse tree produced by {@link mjgrammarParser#while_loop}.
 	 * @param ctx the parse tree
 	 */
-	void enterEvaluation(mjgrammarParser.EvaluationContext ctx);
+	void enterWhile_loop(mjgrammarParser.While_loopContext ctx);
 	/**
-	 * Exit a parse tree produced by {@link mjgrammarParser#evaluation}.
+	 * Exit a parse tree produced by {@link mjgrammarParser#while_loop}.
 	 * @param ctx the parse tree
 	 */
-	void exitEvaluation(mjgrammarParser.EvaluationContext ctx);
+	void exitWhile_loop(mjgrammarParser.While_loopContext ctx);
 	/**
-	 * Enter a parse tree produced by {@link mjgrammarParser#boolean_evaluation}.
+	 * Enter a parse tree produced by {@link mjgrammarParser#println_statement}.
 	 * @param ctx the parse tree
 	 */
-	void enterBoolean_evaluation(mjgrammarParser.Boolean_evaluationContext ctx);
+	void enterPrintln_statement(mjgrammarParser.Println_statementContext ctx);
 	/**
-	 * Exit a parse tree produced by {@link mjgrammarParser#boolean_evaluation}.
+	 * Exit a parse tree produced by {@link mjgrammarParser#println_statement}.
 	 * @param ctx the parse tree
 	 */
-	void exitBoolean_evaluation(mjgrammarParser.Boolean_evaluationContext ctx);
+	void exitPrintln_statement(mjgrammarParser.Println_statementContext ctx);
 	/**
-	 * Enter a parse tree produced by {@link mjgrammarParser#evaluation_1}.
+	 * Enter a parse tree produced by {@link mjgrammarParser#var_eval}.
 	 * @param ctx the parse tree
 	 */
-	void enterEvaluation_1(mjgrammarParser.Evaluation_1Context ctx);
+	void enterVar_eval(mjgrammarParser.Var_evalContext ctx);
 	/**
-	 * Exit a parse tree produced by {@link mjgrammarParser#evaluation_1}.
+	 * Exit a parse tree produced by {@link mjgrammarParser#var_eval}.
 	 * @param ctx the parse tree
 	 */
-	void exitEvaluation_1(mjgrammarParser.Evaluation_1Context ctx);
+	void exitVar_eval(mjgrammarParser.Var_evalContext ctx);
 	/**
-	 * Enter a parse tree produced by {@link mjgrammarParser#evaluation_1a}.
+	 * Enter a parse tree produced by {@link mjgrammarParser#array_eval}.
 	 * @param ctx the parse tree
 	 */
-	void enterEvaluation_1a(mjgrammarParser.Evaluation_1aContext ctx);
+	void enterArray_eval(mjgrammarParser.Array_evalContext ctx);
 	/**
-	 * Exit a parse tree produced by {@link mjgrammarParser#evaluation_1a}.
+	 * Exit a parse tree produced by {@link mjgrammarParser#array_eval}.
 	 * @param ctx the parse tree
 	 */
-	void exitEvaluation_1a(mjgrammarParser.Evaluation_1aContext ctx);
+	void exitArray_eval(mjgrammarParser.Array_evalContext ctx);
 	/**
-	 * Enter a parse tree produced by {@link mjgrammarParser#evaluation_2}.
+	 * Enter a parse tree produced by {@link mjgrammarParser#if_block}.
 	 * @param ctx the parse tree
 	 */
-	void enterEvaluation_2(mjgrammarParser.Evaluation_2Context ctx);
+	void enterIf_block(mjgrammarParser.If_blockContext ctx);
 	/**
-	 * Exit a parse tree produced by {@link mjgrammarParser#evaluation_2}.
+	 * Exit a parse tree produced by {@link mjgrammarParser#if_block}.
 	 * @param ctx the parse tree
 	 */
-	void exitEvaluation_2(mjgrammarParser.Evaluation_2Context ctx);
+	void exitIf_block(mjgrammarParser.If_blockContext ctx);
 	/**
-	 * Enter a parse tree produced by {@link mjgrammarParser#evaluation_2a}.
+	 * Enter a parse tree produced by {@link mjgrammarParser#else_block}.
 	 * @param ctx the parse tree
 	 */
-	void enterEvaluation_2a(mjgrammarParser.Evaluation_2aContext ctx);
+	void enterElse_block(mjgrammarParser.Else_blockContext ctx);
 	/**
-	 * Exit a parse tree produced by {@link mjgrammarParser#evaluation_2a}.
+	 * Exit a parse tree produced by {@link mjgrammarParser#else_block}.
 	 * @param ctx the parse tree
 	 */
-	void exitEvaluation_2a(mjgrammarParser.Evaluation_2aContext ctx);
+	void exitElse_block(mjgrammarParser.Else_blockContext ctx);
 	/**
-	 * Enter a parse tree produced by {@link mjgrammarParser#evaluation_3}.
+	 * Enter a parse tree produced by {@link mjgrammarParser#while_block}.
 	 * @param ctx the parse tree
 	 */
-	void enterEvaluation_3(mjgrammarParser.Evaluation_3Context ctx);
+	void enterWhile_block(mjgrammarParser.While_blockContext ctx);
 	/**
-	 * Exit a parse tree produced by {@link mjgrammarParser#evaluation_3}.
+	 * Exit a parse tree produced by {@link mjgrammarParser#while_block}.
 	 * @param ctx the parse tree
 	 */
-	void exitEvaluation_3(mjgrammarParser.Evaluation_3Context ctx);
+	void exitWhile_block(mjgrammarParser.While_blockContext ctx);
 	/**
-	 * Enter a parse tree produced by {@link mjgrammarParser#evaluation_3a}.
+	 * Enter a parse tree produced by {@link mjgrammarParser#tuple_var_expr}.
 	 * @param ctx the parse tree
 	 */
-	void enterEvaluation_3a(mjgrammarParser.Evaluation_3aContext ctx);
+	void enterTuple_var_expr(mjgrammarParser.Tuple_var_exprContext ctx);
 	/**
-	 * Exit a parse tree produced by {@link mjgrammarParser#evaluation_3a}.
+	 * Exit a parse tree produced by {@link mjgrammarParser#tuple_var_expr}.
 	 * @param ctx the parse tree
 	 */
-	void exitEvaluation_3a(mjgrammarParser.Evaluation_3aContext ctx);
+	void exitTuple_var_expr(mjgrammarParser.Tuple_var_exprContext ctx);
 	/**
-	 * Enter a parse tree produced by {@link mjgrammarParser#evaluation_4}.
+	 * Enter a parse tree produced by the {@code new_object_expr}
+	 * labeled alternative in {@link mjgrammarParser#expression}.
 	 * @param ctx the parse tree
 	 */
-	void enterEvaluation_4(mjgrammarParser.Evaluation_4Context ctx);
+	void enterNew_object_expr(mjgrammarParser.New_object_exprContext ctx);
 	/**
-	 * Exit a parse tree produced by {@link mjgrammarParser#evaluation_4}.
+	 * Exit a parse tree produced by the {@code new_object_expr}
+	 * labeled alternative in {@link mjgrammarParser#expression}.
 	 * @param ctx the parse tree
 	 */
-	void exitEvaluation_4(mjgrammarParser.Evaluation_4Context ctx);
+	void exitNew_object_expr(mjgrammarParser.New_object_exprContext ctx);
 	/**
-	 * Enter a parse tree produced by {@link mjgrammarParser#evaluation_4a}.
+	 * Enter a parse tree produced by the {@code parentheses_expr}
+	 * labeled alternative in {@link mjgrammarParser#expression}.
 	 * @param ctx the parse tree
 	 */
-	void enterEvaluation_4a(mjgrammarParser.Evaluation_4aContext ctx);
+	void enterParentheses_expr(mjgrammarParser.Parentheses_exprContext ctx);
 	/**
-	 * Exit a parse tree produced by {@link mjgrammarParser#evaluation_4a}.
+	 * Exit a parse tree produced by the {@code parentheses_expr}
+	 * labeled alternative in {@link mjgrammarParser#expression}.
 	 * @param ctx the parse tree
 	 */
-	void exitEvaluation_4a(mjgrammarParser.Evaluation_4aContext ctx);
+	void exitParentheses_expr(mjgrammarParser.Parentheses_exprContext ctx);
 	/**
-	 * Enter a parse tree produced by {@link mjgrammarParser#evaluation_5}.
+	 * Enter a parse tree produced by the {@code id_expr}
+	 * labeled alternative in {@link mjgrammarParser#expression}.
 	 * @param ctx the parse tree
 	 */
-	void enterEvaluation_5(mjgrammarParser.Evaluation_5Context ctx);
+	void enterId_expr(mjgrammarParser.Id_exprContext ctx);
 	/**
-	 * Exit a parse tree produced by {@link mjgrammarParser#evaluation_5}.
+	 * Exit a parse tree produced by the {@code id_expr}
+	 * labeled alternative in {@link mjgrammarParser#expression}.
 	 * @param ctx the parse tree
 	 */
-	void exitEvaluation_5(mjgrammarParser.Evaluation_5Context ctx);
+	void exitId_expr(mjgrammarParser.Id_exprContext ctx);
 	/**
-	 * Enter a parse tree produced by {@link mjgrammarParser#evaluation_5a}.
+	 * Enter a parse tree produced by the {@code this_expr}
+	 * labeled alternative in {@link mjgrammarParser#expression}.
 	 * @param ctx the parse tree
 	 */
-	void enterEvaluation_5a(mjgrammarParser.Evaluation_5aContext ctx);
+	void enterThis_expr(mjgrammarParser.This_exprContext ctx);
 	/**
-	 * Exit a parse tree produced by {@link mjgrammarParser#evaluation_5a}.
+	 * Exit a parse tree produced by the {@code this_expr}
+	 * labeled alternative in {@link mjgrammarParser#expression}.
 	 * @param ctx the parse tree
 	 */
-	void exitEvaluation_5a(mjgrammarParser.Evaluation_5aContext ctx);
+	void exitThis_expr(mjgrammarParser.This_exprContext ctx);
 	/**
-	 * Enter a parse tree produced by {@link mjgrammarParser#evaluation_6}.
+	 * Enter a parse tree produced by the {@code plus_expr}
+	 * labeled alternative in {@link mjgrammarParser#expression}.
 	 * @param ctx the parse tree
 	 */
-	void enterEvaluation_6(mjgrammarParser.Evaluation_6Context ctx);
+	void enterPlus_expr(mjgrammarParser.Plus_exprContext ctx);
 	/**
-	 * Exit a parse tree produced by {@link mjgrammarParser#evaluation_6}.
+	 * Exit a parse tree produced by the {@code plus_expr}
+	 * labeled alternative in {@link mjgrammarParser#expression}.
 	 * @param ctx the parse tree
 	 */
-	void exitEvaluation_6(mjgrammarParser.Evaluation_6Context ctx);
+	void exitPlus_expr(mjgrammarParser.Plus_exprContext ctx);
 	/**
-	 * Enter a parse tree produced by {@link mjgrammarParser#evaluation_6a}.
+	 * Enter a parse tree produced by the {@code mult_expr}
+	 * labeled alternative in {@link mjgrammarParser#expression}.
 	 * @param ctx the parse tree
 	 */
-	void enterEvaluation_6a(mjgrammarParser.Evaluation_6aContext ctx);
+	void enterMult_expr(mjgrammarParser.Mult_exprContext ctx);
 	/**
-	 * Exit a parse tree produced by {@link mjgrammarParser#evaluation_6a}.
+	 * Exit a parse tree produced by the {@code mult_expr}
+	 * labeled alternative in {@link mjgrammarParser#expression}.
 	 * @param ctx the parse tree
 	 */
-	void exitEvaluation_6a(mjgrammarParser.Evaluation_6aContext ctx);
+	void exitMult_expr(mjgrammarParser.Mult_exprContext ctx);
 	/**
-	 * Enter a parse tree produced by {@link mjgrammarParser#evaluation_7}.
+	 * Enter a parse tree produced by the {@code not_expr}
+	 * labeled alternative in {@link mjgrammarParser#expression}.
 	 * @param ctx the parse tree
 	 */
-	void enterEvaluation_7(mjgrammarParser.Evaluation_7Context ctx);
+	void enterNot_expr(mjgrammarParser.Not_exprContext ctx);
 	/**
-	 * Exit a parse tree produced by {@link mjgrammarParser#evaluation_7}.
+	 * Exit a parse tree produced by the {@code not_expr}
+	 * labeled alternative in {@link mjgrammarParser#expression}.
 	 * @param ctx the parse tree
 	 */
-	void exitEvaluation_7(mjgrammarParser.Evaluation_7Context ctx);
+	void exitNot_expr(mjgrammarParser.Not_exprContext ctx);
 	/**
-	 * Enter a parse tree produced by {@link mjgrammarParser#evaluation_7a}.
+	 * Enter a parse tree produced by the {@code bool_lit_expr}
+	 * labeled alternative in {@link mjgrammarParser#expression}.
 	 * @param ctx the parse tree
 	 */
-	void enterEvaluation_7a(mjgrammarParser.Evaluation_7aContext ctx);
+	void enterBool_lit_expr(mjgrammarParser.Bool_lit_exprContext ctx);
 	/**
-	 * Exit a parse tree produced by {@link mjgrammarParser#evaluation_7a}.
+	 * Exit a parse tree produced by the {@code bool_lit_expr}
+	 * labeled alternative in {@link mjgrammarParser#expression}.
 	 * @param ctx the parse tree
 	 */
-	void exitEvaluation_7a(mjgrammarParser.Evaluation_7aContext ctx);
+	void exitBool_lit_expr(mjgrammarParser.Bool_lit_exprContext ctx);
 	/**
-	 * Enter a parse tree produced by {@link mjgrammarParser#evaluation_8}.
+	 * Enter a parse tree produced by the {@code lt_expr}
+	 * labeled alternative in {@link mjgrammarParser#expression}.
 	 * @param ctx the parse tree
 	 */
-	void enterEvaluation_8(mjgrammarParser.Evaluation_8Context ctx);
+	void enterLt_expr(mjgrammarParser.Lt_exprContext ctx);
 	/**
-	 * Exit a parse tree produced by {@link mjgrammarParser#evaluation_8}.
+	 * Exit a parse tree produced by the {@code lt_expr}
+	 * labeled alternative in {@link mjgrammarParser#expression}.
 	 * @param ctx the parse tree
 	 */
-	void exitEvaluation_8(mjgrammarParser.Evaluation_8Context ctx);
+	void exitLt_expr(mjgrammarParser.Lt_exprContext ctx);
 	/**
-	 * Enter a parse tree produced by {@link mjgrammarParser#evaluation_8a}.
+	 * Enter a parse tree produced by the {@code and_expr}
+	 * labeled alternative in {@link mjgrammarParser#expression}.
 	 * @param ctx the parse tree
 	 */
-	void enterEvaluation_8a(mjgrammarParser.Evaluation_8aContext ctx);
+	void enterAnd_expr(mjgrammarParser.And_exprContext ctx);
 	/**
-	 * Exit a parse tree produced by {@link mjgrammarParser#evaluation_8a}.
+	 * Exit a parse tree produced by the {@code and_expr}
+	 * labeled alternative in {@link mjgrammarParser#expression}.
 	 * @param ctx the parse tree
 	 */
-	void exitEvaluation_8a(mjgrammarParser.Evaluation_8aContext ctx);
+	void exitAnd_expr(mjgrammarParser.And_exprContext ctx);
 	/**
-	 * Enter a parse tree produced by {@link mjgrammarParser#evaluation_9}.
+	 * Enter a parse tree produced by the {@code array_size_expr}
+	 * labeled alternative in {@link mjgrammarParser#expression}.
 	 * @param ctx the parse tree
 	 */
-	void enterEvaluation_9(mjgrammarParser.Evaluation_9Context ctx);
+	void enterArray_size_expr(mjgrammarParser.Array_size_exprContext ctx);
 	/**
-	 * Exit a parse tree produced by {@link mjgrammarParser#evaluation_9}.
+	 * Exit a parse tree produced by the {@code array_size_expr}
+	 * labeled alternative in {@link mjgrammarParser#expression}.
 	 * @param ctx the parse tree
 	 */
-	void exitEvaluation_9(mjgrammarParser.Evaluation_9Context ctx);
+	void exitArray_size_expr(mjgrammarParser.Array_size_exprContext ctx);
+	/**
+	 * Enter a parse tree produced by the {@code array_instantiation_expr}
+	 * labeled alternative in {@link mjgrammarParser#expression}.
+	 * @param ctx the parse tree
+	 */
+	void enterArray_instantiation_expr(mjgrammarParser.Array_instantiation_exprContext ctx);
+	/**
+	 * Exit a parse tree produced by the {@code array_instantiation_expr}
+	 * labeled alternative in {@link mjgrammarParser#expression}.
+	 * @param ctx the parse tree
+	 */
+	void exitArray_instantiation_expr(mjgrammarParser.Array_instantiation_exprContext ctx);
+	/**
+	 * Enter a parse tree produced by the {@code int_lit_expr}
+	 * labeled alternative in {@link mjgrammarParser#expression}.
+	 * @param ctx the parse tree
+	 */
+	void enterInt_lit_expr(mjgrammarParser.Int_lit_exprContext ctx);
+	/**
+	 * Exit a parse tree produced by the {@code int_lit_expr}
+	 * labeled alternative in {@link mjgrammarParser#expression}.
+	 * @param ctx the parse tree
+	 */
+	void exitInt_lit_expr(mjgrammarParser.Int_lit_exprContext ctx);
+	/**
+	 * Enter a parse tree produced by the {@code method_call_expr}
+	 * labeled alternative in {@link mjgrammarParser#expression}.
+	 * @param ctx the parse tree
+	 */
+	void enterMethod_call_expr(mjgrammarParser.Method_call_exprContext ctx);
+	/**
+	 * Exit a parse tree produced by the {@code method_call_expr}
+	 * labeled alternative in {@link mjgrammarParser#expression}.
+	 * @param ctx the parse tree
+	 */
+	void exitMethod_call_expr(mjgrammarParser.Method_call_exprContext ctx);
+	/**
+	 * Enter a parse tree produced by the {@code minus_expr}
+	 * labeled alternative in {@link mjgrammarParser#expression}.
+	 * @param ctx the parse tree
+	 */
+	void enterMinus_expr(mjgrammarParser.Minus_exprContext ctx);
+	/**
+	 * Exit a parse tree produced by the {@code minus_expr}
+	 * labeled alternative in {@link mjgrammarParser#expression}.
+	 * @param ctx the parse tree
+	 */
+	void exitMinus_expr(mjgrammarParser.Minus_exprContext ctx);
+	/**
+	 * Enter a parse tree produced by the {@code tuple_return_expr}
+	 * labeled alternative in {@link mjgrammarParser#expression}.
+	 * @param ctx the parse tree
+	 */
+	void enterTuple_return_expr(mjgrammarParser.Tuple_return_exprContext ctx);
+	/**
+	 * Exit a parse tree produced by the {@code tuple_return_expr}
+	 * labeled alternative in {@link mjgrammarParser#expression}.
+	 * @param ctx the parse tree
+	 */
+	void exitTuple_return_expr(mjgrammarParser.Tuple_return_exprContext ctx);
+	/**
+	 * Enter a parse tree produced by the {@code array_acces_expr}
+	 * labeled alternative in {@link mjgrammarParser#expression}.
+	 * @param ctx the parse tree
+	 */
+	void enterArray_acces_expr(mjgrammarParser.Array_acces_exprContext ctx);
+	/**
+	 * Exit a parse tree produced by the {@code array_acces_expr}
+	 * labeled alternative in {@link mjgrammarParser#expression}.
+	 * @param ctx the parse tree
+	 */
+	void exitArray_acces_expr(mjgrammarParser.Array_acces_exprContext ctx);
+	/**
+	 * Enter a parse tree produced by {@link mjgrammarParser#boolean_literal}.
+	 * @param ctx the parse tree
+	 */
+	void enterBoolean_literal(mjgrammarParser.Boolean_literalContext ctx);
+	/**
+	 * Exit a parse tree produced by {@link mjgrammarParser#boolean_literal}.
+	 * @param ctx the parse tree
+	 */
+	void exitBoolean_literal(mjgrammarParser.Boolean_literalContext ctx);
 }

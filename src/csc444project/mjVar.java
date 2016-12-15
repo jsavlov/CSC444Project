@@ -6,8 +6,8 @@ public class mjVar {
     private String varType;
     private String name;
 
-    private mjClass parentClass;
-    private mjMethod parentMethod;
+    private MJClass parentClass;
+    private MJMethod parentMethod;
 
     public mjVar(String t, String n) {
         this.varType = t;
@@ -30,19 +30,19 @@ public class mjVar {
         this.name = name;
     }
 
-    public mjClass getParentClass() {
+    public MJClass getParentClass() {
         return parentClass;
     }
 
-    public void setParentClass(mjClass parentClass) {
+    public void setParentClass(MJClass parentClass) {
         this.parentClass = parentClass;
     }
 
-    public mjMethod getParentMethod() {
+    public MJMethod getParentMethod() {
         return parentMethod;
     }
 
-    public void setParentMethod(mjMethod parentMethod) {
+    public void setParentMethod(MJMethod parentMethod) {
         this.parentMethod = parentMethod;
     }
 }

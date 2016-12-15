@@ -66,6 +66,20 @@ public class mjgrammarBaseVisitor<T> extends AbstractParseTreeVisitor<T> impleme
 	 * <p>The default implementation returns the result of calling
 	 * {@link #visitChildren} on {@code ctx}.</p>
 	 */
+	@Override public T visitField_dec(mjgrammarParser.Field_decContext ctx) { return visitChildren(ctx); }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation returns the result of calling
+	 * {@link #visitChildren} on {@code ctx}.</p>
+	 */
+	@Override public T visitLocal_dec(mjgrammarParser.Local_decContext ctx) { return visitChildren(ctx); }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation returns the result of calling
+	 * {@link #visitChildren} on {@code ctx}.</p>
+	 */
 	@Override public T visitVar_dec(mjgrammarParser.Var_decContext ctx) { return visitChildren(ctx); }
 	/**
 	 * {@inheritDoc}
@@ -81,6 +95,27 @@ public class mjgrammarBaseVisitor<T> extends AbstractParseTreeVisitor<T> impleme
 	 * {@link #visitChildren} on {@code ctx}.</p>
 	 */
 	@Override public T visitMethod_dec(mjgrammarParser.Method_decContext ctx) { return visitChildren(ctx); }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation returns the result of calling
+	 * {@link #visitChildren} on {@code ctx}.</p>
+	 */
+	@Override public T visitParam_list(mjgrammarParser.Param_listContext ctx) { return visitChildren(ctx); }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation returns the result of calling
+	 * {@link #visitChildren} on {@code ctx}.</p>
+	 */
+	@Override public T visitMethod_body(mjgrammarParser.Method_bodyContext ctx) { return visitChildren(ctx); }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation returns the result of calling
+	 * {@link #visitChildren} on {@code ctx}.</p>
+	 */
+	@Override public T visitReturn_statement(mjgrammarParser.Return_statementContext ctx) { return visitChildren(ctx); }
 	/**
 	 * {@inheritDoc}
 	 *
@@ -136,13 +171,6 @@ public class mjgrammarBaseVisitor<T> extends AbstractParseTreeVisitor<T> impleme
 	 * <p>The default implementation returns the result of calling
 	 * {@link #visitChildren} on {@code ctx}.</p>
 	 */
-	@Override public T visitType_dec_a(mjgrammarParser.Type_dec_aContext ctx) { return visitChildren(ctx); }
-	/**
-	 * {@inheritDoc}
-	 *
-	 * <p>The default implementation returns the result of calling
-	 * {@link #visitChildren} on {@code ctx}.</p>
-	 */
 	@Override public T visitStatement(mjgrammarParser.StatementContext ctx) { return visitChildren(ctx); }
 	/**
 	 * {@inheritDoc}
@@ -150,138 +178,187 @@ public class mjgrammarBaseVisitor<T> extends AbstractParseTreeVisitor<T> impleme
 	 * <p>The default implementation returns the result of calling
 	 * {@link #visitChildren} on {@code ctx}.</p>
 	 */
-	@Override public T visitStatement_1(mjgrammarParser.Statement_1Context ctx) { return visitChildren(ctx); }
+	@Override public T visitIf_statement(mjgrammarParser.If_statementContext ctx) { return visitChildren(ctx); }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation returns the result of calling
 	 * {@link #visitChildren} on {@code ctx}.</p>
 	 */
-	@Override public T visitEvaluation(mjgrammarParser.EvaluationContext ctx) { return visitChildren(ctx); }
+	@Override public T visitWhile_loop(mjgrammarParser.While_loopContext ctx) { return visitChildren(ctx); }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation returns the result of calling
 	 * {@link #visitChildren} on {@code ctx}.</p>
 	 */
-	@Override public T visitBoolean_evaluation(mjgrammarParser.Boolean_evaluationContext ctx) { return visitChildren(ctx); }
+	@Override public T visitPrintln_statement(mjgrammarParser.Println_statementContext ctx) { return visitChildren(ctx); }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation returns the result of calling
 	 * {@link #visitChildren} on {@code ctx}.</p>
 	 */
-	@Override public T visitEvaluation_1(mjgrammarParser.Evaluation_1Context ctx) { return visitChildren(ctx); }
+	@Override public T visitVar_eval(mjgrammarParser.Var_evalContext ctx) { return visitChildren(ctx); }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation returns the result of calling
 	 * {@link #visitChildren} on {@code ctx}.</p>
 	 */
-	@Override public T visitEvaluation_1a(mjgrammarParser.Evaluation_1aContext ctx) { return visitChildren(ctx); }
+	@Override public T visitArray_eval(mjgrammarParser.Array_evalContext ctx) { return visitChildren(ctx); }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation returns the result of calling
 	 * {@link #visitChildren} on {@code ctx}.</p>
 	 */
-	@Override public T visitEvaluation_2(mjgrammarParser.Evaluation_2Context ctx) { return visitChildren(ctx); }
+	@Override public T visitIf_block(mjgrammarParser.If_blockContext ctx) { return visitChildren(ctx); }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation returns the result of calling
 	 * {@link #visitChildren} on {@code ctx}.</p>
 	 */
-	@Override public T visitEvaluation_2a(mjgrammarParser.Evaluation_2aContext ctx) { return visitChildren(ctx); }
+	@Override public T visitElse_block(mjgrammarParser.Else_blockContext ctx) { return visitChildren(ctx); }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation returns the result of calling
 	 * {@link #visitChildren} on {@code ctx}.</p>
 	 */
-	@Override public T visitEvaluation_3(mjgrammarParser.Evaluation_3Context ctx) { return visitChildren(ctx); }
+	@Override public T visitWhile_block(mjgrammarParser.While_blockContext ctx) { return visitChildren(ctx); }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation returns the result of calling
 	 * {@link #visitChildren} on {@code ctx}.</p>
 	 */
-	@Override public T visitEvaluation_3a(mjgrammarParser.Evaluation_3aContext ctx) { return visitChildren(ctx); }
+	@Override public T visitTuple_var_expr(mjgrammarParser.Tuple_var_exprContext ctx) { return visitChildren(ctx); }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation returns the result of calling
 	 * {@link #visitChildren} on {@code ctx}.</p>
 	 */
-	@Override public T visitEvaluation_4(mjgrammarParser.Evaluation_4Context ctx) { return visitChildren(ctx); }
+	@Override public T visitNew_object_expr(mjgrammarParser.New_object_exprContext ctx) { return visitChildren(ctx); }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation returns the result of calling
 	 * {@link #visitChildren} on {@code ctx}.</p>
 	 */
-	@Override public T visitEvaluation_4a(mjgrammarParser.Evaluation_4aContext ctx) { return visitChildren(ctx); }
+	@Override public T visitParentheses_expr(mjgrammarParser.Parentheses_exprContext ctx) { return visitChildren(ctx); }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation returns the result of calling
 	 * {@link #visitChildren} on {@code ctx}.</p>
 	 */
-	@Override public T visitEvaluation_5(mjgrammarParser.Evaluation_5Context ctx) { return visitChildren(ctx); }
+	@Override public T visitId_expr(mjgrammarParser.Id_exprContext ctx) { return visitChildren(ctx); }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation returns the result of calling
 	 * {@link #visitChildren} on {@code ctx}.</p>
 	 */
-	@Override public T visitEvaluation_5a(mjgrammarParser.Evaluation_5aContext ctx) { return visitChildren(ctx); }
+	@Override public T visitThis_expr(mjgrammarParser.This_exprContext ctx) { return visitChildren(ctx); }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation returns the result of calling
 	 * {@link #visitChildren} on {@code ctx}.</p>
 	 */
-	@Override public T visitEvaluation_6(mjgrammarParser.Evaluation_6Context ctx) { return visitChildren(ctx); }
+	@Override public T visitPlus_expr(mjgrammarParser.Plus_exprContext ctx) { return visitChildren(ctx); }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation returns the result of calling
 	 * {@link #visitChildren} on {@code ctx}.</p>
 	 */
-	@Override public T visitEvaluation_6a(mjgrammarParser.Evaluation_6aContext ctx) { return visitChildren(ctx); }
+	@Override public T visitMult_expr(mjgrammarParser.Mult_exprContext ctx) { return visitChildren(ctx); }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation returns the result of calling
 	 * {@link #visitChildren} on {@code ctx}.</p>
 	 */
-	@Override public T visitEvaluation_7(mjgrammarParser.Evaluation_7Context ctx) { return visitChildren(ctx); }
+	@Override public T visitNot_expr(mjgrammarParser.Not_exprContext ctx) { return visitChildren(ctx); }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation returns the result of calling
 	 * {@link #visitChildren} on {@code ctx}.</p>
 	 */
-	@Override public T visitEvaluation_7a(mjgrammarParser.Evaluation_7aContext ctx) { return visitChildren(ctx); }
+	@Override public T visitBool_lit_expr(mjgrammarParser.Bool_lit_exprContext ctx) { return visitChildren(ctx); }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation returns the result of calling
 	 * {@link #visitChildren} on {@code ctx}.</p>
 	 */
-	@Override public T visitEvaluation_8(mjgrammarParser.Evaluation_8Context ctx) { return visitChildren(ctx); }
+	@Override public T visitLt_expr(mjgrammarParser.Lt_exprContext ctx) { return visitChildren(ctx); }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation returns the result of calling
 	 * {@link #visitChildren} on {@code ctx}.</p>
 	 */
-	@Override public T visitEvaluation_8a(mjgrammarParser.Evaluation_8aContext ctx) { return visitChildren(ctx); }
+	@Override public T visitAnd_expr(mjgrammarParser.And_exprContext ctx) { return visitChildren(ctx); }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation returns the result of calling
 	 * {@link #visitChildren} on {@code ctx}.</p>
 	 */
-	@Override public T visitEvaluation_9(mjgrammarParser.Evaluation_9Context ctx) { return visitChildren(ctx); }
+	@Override public T visitArray_size_expr(mjgrammarParser.Array_size_exprContext ctx) { return visitChildren(ctx); }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation returns the result of calling
+	 * {@link #visitChildren} on {@code ctx}.</p>
+	 */
+	@Override public T visitArray_instantiation_expr(mjgrammarParser.Array_instantiation_exprContext ctx) { return visitChildren(ctx); }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation returns the result of calling
+	 * {@link #visitChildren} on {@code ctx}.</p>
+	 */
+	@Override public T visitInt_lit_expr(mjgrammarParser.Int_lit_exprContext ctx) { return visitChildren(ctx); }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation returns the result of calling
+	 * {@link #visitChildren} on {@code ctx}.</p>
+	 */
+	@Override public T visitMethod_call_expr(mjgrammarParser.Method_call_exprContext ctx) { return visitChildren(ctx); }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation returns the result of calling
+	 * {@link #visitChildren} on {@code ctx}.</p>
+	 */
+	@Override public T visitMinus_expr(mjgrammarParser.Minus_exprContext ctx) { return visitChildren(ctx); }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation returns the result of calling
+	 * {@link #visitChildren} on {@code ctx}.</p>
+	 */
+	@Override public T visitTuple_return_expr(mjgrammarParser.Tuple_return_exprContext ctx) { return visitChildren(ctx); }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation returns the result of calling
+	 * {@link #visitChildren} on {@code ctx}.</p>
+	 */
+	@Override public T visitArray_acces_expr(mjgrammarParser.Array_acces_exprContext ctx) { return visitChildren(ctx); }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation returns the result of calling
+	 * {@link #visitChildren} on {@code ctx}.</p>
+	 */
+	@Override public T visitBoolean_literal(mjgrammarParser.Boolean_literalContext ctx) { return visitChildren(ctx); }
 }

@@ -200,4 +200,16 @@ public class AssignmentWalker extends  mjgrammarBaseListener {
     public void exitWhile_block(mjgrammarParser.While_blockContext ctx) {
         exitScope();
     }
+
+    @Override
+    public void enterWhile_loop(mjgrammarParser.While_loopContext ctx)
+    {
+        enterScope(ctx);
+    }
+
+    @Override
+    public void exitWhile_loop(mjgrammarParser.While_loopContext ctx)
+    {
+        exitScope();
+    }
 }

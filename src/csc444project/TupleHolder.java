@@ -1,6 +1,8 @@
 package csc444project;
 
 
+import org.objectweb.asm.Type;
+
 public class TupleHolder extends MJSymbol implements Returnable {
 
     private String typeString;
@@ -25,5 +27,17 @@ public class TupleHolder extends MJSymbol implements Returnable {
     @Override
     public void setReturnType(Returnable returnType) {
 
+    }
+
+    @Override
+    public Type getAsmType()
+    {
+        return null;
+    }
+
+    @Override
+    public boolean isInstanceOf(Returnable queriedClass)
+    {
+        return false;
     }
 }

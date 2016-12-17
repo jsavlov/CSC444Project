@@ -130,6 +130,8 @@ expression:
     # this_expr
     | tuple_var_expr
     # tuple_return_expr
+    //| ID '(' expression ')'
+    //# tuple_access
     | '(' expression ')'
     # parentheses_expr
     ;
@@ -158,7 +160,15 @@ INT_LIT
 	: ('0'..'9')+
 	;
 
-ID: [a-zA-Z_]+;
+ID: [a-zA-Z_0-9]+;
+
+MULTILINE_COMMENT
+	:  '/*' .*? '*/' -> skip
+	;
+
+LINE_COMMENT
+	:  '//' .*? '\n' -> skip
+	;
 
 
 

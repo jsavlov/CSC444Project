@@ -1,5 +1,7 @@
 package csc444project;
 
+import org.objectweb.asm.Type;
+
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
@@ -51,5 +53,17 @@ public class TupleSymbol extends MJSymbol implements Returnable {
     public void setReturnType(Returnable returnType)
     {
 
+    }
+
+    @Override
+    public Type getAsmType()
+    {
+        return null;
+    }
+
+    @Override
+    public boolean isInstanceOf(Returnable queriedClass)
+    {
+        return false;
     }
 }

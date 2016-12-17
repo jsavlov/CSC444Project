@@ -14,7 +14,31 @@ import java.util.Map;
 
 public class main {
 
-    static final String FILE_NAME = "/Users/jason/newsample.java"; // File name goes here
+    static String FILE_NAME;
+
+    static final String FILE_DIR = "/Users/jason/minijava_samples/";
+
+    static String[] FILE_NAMES = {
+            "Factorial.java",
+            "BinarySearch.java",
+            "TreeVisitor.java",
+            "QuickSort.java",
+            "LinearSearch.java",
+            "LinkedList.java",
+            "BinaryTree.java",
+            "BubbleSort.java"
+    };
+
+
+    static
+    {
+        for (int i = 0; i < FILE_NAMES.length; i++)
+        {
+            FILE_NAMES[i] = FILE_DIR + FILE_NAMES[i];
+            System.out.println(FILE_NAMES[i]);
+        }
+    }
+
 
 
     public static void main(String[] args) {
@@ -24,6 +48,8 @@ public class main {
         mjgrammarLexer lexer;
 
         try {
+            FILE_NAME = FILE_NAMES[7];
+            System.out.println("Chosen file: " + FILE_NAME );
             fis = new FileInputStream(FILE_NAME);
             inStream = new ANTLRInputStream(fis);
         } catch (IOException ex) {
@@ -72,19 +98,12 @@ public class main {
 
         ErrorReporter.exitOnErrors();
 
-        /*
-        ParseTreeWalker walker = new ParseTreeWalker();
+        CodeGenerator codeGen = new CodeGenerator(parser, classMap, masterScopeList, callerList);
 
-        mjWalker mwalker = new mjWalker();
-
-        walker.walk(mwalker, tree);
-        */
+        ParseTreeWalker.DEFAULT.walk(codeGen, tree);
 
         System.out.println("Program complete...");
 
     }
 
-    public static String getFileName() {
-        return FILE_NAME;
-    }
 }

@@ -5,6 +5,7 @@ import org.antlr.v4.runtime.ParserRuleContext;
 import org.antlr.v4.runtime.tree.ParseTreeProperty;
 
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 import java.util.Map;
 
@@ -62,7 +63,7 @@ public class TypeCheckWalker extends mjgrammarBaseVisitor<MJClass>
             ErrorReporter.printIncompatibleReturnTypeError(parser, ctx.method_name().ID().getSymbol(), class0, class1, method0, method1);
         }
 
-        visitChildren(ctx);
+        MJClass result = visitChildren(ctx);
         currentScope = currentScope.getEnclosingScope();
         return null;
 
@@ -186,7 +187,7 @@ public class TypeCheckWalker extends mjgrammarBaseVisitor<MJClass>
                 List<MJClass> varTypes = ((TupleSymbol) var).getTypeList();
                 for (int i = 0; i < varTypes.size(); i++) {
                     if (varTypes.get(i) != ((TupleClass) rightSide).getElementTypeAt(i)) {
-
+                        ErrorReporter.printRequiredFoundError("Error: incompatible type.", parser, ctx.ID().getSymbol(), varTypes.get(i).toString(), rightSide.toString());
                     }
                 }
 
@@ -254,7 +255,7 @@ public class TypeCheckWalker extends mjgrammarBaseVisitor<MJClass>
             return null;
         }
 
-        return var.getType();
+        return (MJClass) var.getType();
     }
 
     @Override
@@ -363,13 +364,17 @@ public class TypeCheckWalker extends mjgrammarBaseVisitor<MJClass>
                 paramList.add(visit(_ctx));
             }
 
+            Collections.sort(paramList);
+
             List<MJClass> paramListDef = method.getParameterListDef();
+
+            Collections.sort(paramListDef);
             if (paramListDef.size() != paramList.size()) {
                 ErrorReporter.printRequiredFoundError("Error: method parameters of method " + method.getName() + " do not match method definition.",
                         parser, ctx.ID().getSymbol(),   paramListDef.toString(), paramList.toString());
 
                 System.err.println("Explanation: Actual and formal arguments differ in length.");
-                return method.getType();
+                return (MJClass) method.getType();
             }
 
             for (int i = 0; i < paramListDef.size(); i++)
@@ -379,10 +384,29 @@ public class TypeCheckWalker extends mjgrammarBaseVisitor<MJClass>
                             parser, ctx.ID().getSymbol(), paramListDef.toString(), paramList.toString());
                 }
             }
-            return method.getType();
+            return (MJClass) method.getType();
         }
 
     }
+
+    /*
+    @Override
+    public MJClass visitTuple_access(mjgrammarParser.Tuple_accessContext ctx)
+    {
+        String varName = ctx.ID().getText();
+        MJSymbol sym = currentScope.lookupSymbol(varName);
+        if (!(sym instanceof TupleSymbol)) {
+            ErrorReporter.printCompleteError(parser, ctx.ID().getSymbol(), "Error: trying to access tuple elements of a non-tuple", ctx.ID().getText(), "Location: " + currentScope.getName());
+        }
+
+        MJClass tupleNumberExpr = visit(ctx.expression());
+        if (tupleNumberExpr != INT) {
+            // todo: report error
+        }
+
+        return null;
+    }
+    */
 
     @Override
     public MJClass visitMinus_expr(mjgrammarParser.Minus_exprContext ctx)
@@ -425,6 +449,6 @@ public class TypeCheckWalker extends mjgrammarBaseVisitor<MJClass>
         MJClass result = visitChildren(ctx);
         currentScope = currentScope.getEnclosingScope();
 
-        return null;
+        return result;
     }
 }

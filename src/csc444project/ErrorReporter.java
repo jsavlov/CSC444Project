@@ -48,7 +48,7 @@ public final class ErrorReporter {
         ErrorReporter.underlineError(recognizer, token);
     }
 
-    public static void printIncompatibleReturnTypeError(Recognizer recognizer, Token token, MJClass originalClass, MJClass overwritingClass, MJMethod originalMethod, MJMethod overwritingMethod) {
+    public static void printIncompatibleReturnTypeError(Recognizer recognizer, Token token, Returnable originalClass, Returnable overwritingClass, MJMethod originalMethod, MJMethod overwritingMethod) {
         ErrorReporter.printFileNameAndLineNumber(token);
         System.err.println("Error: " + overwritingMethod + " in class " + overwritingClass + " cannot override " + originalMethod + " in class " + originalClass);
         ErrorReporter.underlineError(recognizer, token);
@@ -75,7 +75,7 @@ public final class ErrorReporter {
         System.err.println("\tFound: " + found);
     }
 
-    public static void binaryOpTypeError(Recognizer recognizer, ParserRuleContext ctx, Token operator, MJClass foundLeft, MJClass foundRight, MJClass expectedLeft, MJClass expectedRight) {
+    public static void binaryOpTypeError(Recognizer recognizer, ParserRuleContext ctx, Token operator, Returnable foundLeft, Returnable foundRight, Returnable expectedLeft, Returnable expectedRight) {
         if (foundLeft != null && foundRight != null && !(foundLeft == expectedLeft && foundRight == expectedRight)) {
             ErrorReporter.printFileNameAndLineNumber(operator);
             System.err.println("Error: Bad operand types for binary operator \'" + operator.getText() + "\'");
@@ -85,7 +85,7 @@ public final class ErrorReporter {
         }
     }
 
-    public static void printUnresolvedSymbolError(Recognizer recognizer, Token token, String symType, MJClass errorLocation) {
+    public static void printUnresolvedSymbolError(Recognizer recognizer, Token token, String symType, Returnable errorLocation) {
         ErrorReporter.printFileNameAndLineNumber(token);
         System.err.println("Error: cannot find symbol...");
         ErrorReporter.underlineError(recognizer, token);
@@ -119,7 +119,7 @@ public final class ErrorReporter {
     }
 
     public static void reportCyclicInheritance(Recognizer recognizer, mjgrammarParser.Class_decContext ctx, MJClass mjClass) {
-        MJClass original = mjClass;
+        MJClass original = (MJClass) mjClass;
         while (mjClass != null) {
             mjClass = mjClass.getSuperclass();
             if (mjClass == original) {

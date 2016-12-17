@@ -21,7 +21,7 @@ public class mjgrammarParser extends Parser {
 		T__9=10, T__10=11, T__11=12, T__12=13, T__13=14, T__14=15, T__15=16, T__16=17, 
 		T__17=18, T__18=19, T__19=20, T__20=21, T__21=22, AND=23, LT=24, PLUS=25, 
 		MINUS=26, TIMES=27, NOT=28, LSB=29, RSB=30, DOTLENGTH=31, LP=32, RP=33, 
-		RETURN=34, EQ=35, WS=36, INT_LIT=37, ID=38;
+		RETURN=34, EQ=35, WS=36, INT_LIT=37, ID=38, MULTILINE_COMMENT=39, LINE_COMMENT=40;
 	public static final int
 		RULE_goal = 0, RULE_main_class_dec = 1, RULE_main_class_name = 2, RULE_main_class_param = 3, 
 		RULE_class_dec = 4, RULE_class_name = 5, RULE_superclass_name = 6, RULE_field_dec = 7, 
@@ -54,7 +54,7 @@ public class mjgrammarParser extends Parser {
 		null, null, null, null, null, null, null, null, null, null, null, null, 
 		null, null, null, null, null, null, null, null, null, null, null, "AND", 
 		"LT", "PLUS", "MINUS", "TIMES", "NOT", "LSB", "RSB", "DOTLENGTH", "LP", 
-		"RP", "RETURN", "EQ", "WS", "INT_LIT", "ID"
+		"RP", "RETURN", "EQ", "WS", "INT_LIT", "ID", "MULTILINE_COMMENT", "LINE_COMMENT"
 	};
 	public static final Vocabulary VOCABULARY = new VocabularyImpl(_LITERAL_NAMES, _SYMBOLIC_NAMES);
 
@@ -2720,7 +2720,7 @@ public class mjgrammarParser extends Parser {
 	}
 
 	public static final String _serializedATN =
-		"\3\u0430\ud6d1\u8206\uad2d\u4417\uaef1\u8d80\uaadd\3(\u0159\4\2\t\2\4"+
+		"\3\u0430\ud6d1\u8206\uad2d\u4417\uaef1\u8d80\uaadd\3*\u0159\4\2\t\2\4"+
 		"\3\t\3\4\4\t\4\4\5\t\5\4\6\t\6\4\7\t\7\4\b\t\b\4\t\t\t\4\n\t\n\4\13\t"+
 		"\13\4\f\t\f\4\r\t\r\4\16\t\16\4\17\t\17\4\20\t\20\4\21\t\21\4\22\t\22"+
 		"\4\23\t\23\4\24\t\24\4\25\t\25\4\26\t\26\4\27\t\27\4\30\t\30\4\31\t\31"+

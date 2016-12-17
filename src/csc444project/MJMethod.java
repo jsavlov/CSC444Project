@@ -1,6 +1,7 @@
 package csc444project;
 
 import org.antlr.v4.runtime.tree.ParseTreeProperty;
+import org.objectweb.asm.Type;
 
 import java.util.*;
 
@@ -30,7 +31,14 @@ public class MJMethod extends MJSymbol implements Scope, Returnable {
     public MJMethod(String n, Returnable rt, Scope owner) {
         this.name = n;
         this.returnType = rt;
+        super.type = rt;
         this.owner = owner;
+    }
+
+    @Override
+    public boolean isInstanceOf(Returnable queriedClass)
+    {
+        return false;
     }
 
     public String getName() {
@@ -63,7 +71,7 @@ public class MJMethod extends MJSymbol implements Scope, Returnable {
         List<MJClass> paramListDef = new ArrayList<>();
 
         for (MJSymbol sym : paramList) {
-            paramListDef.add(sym.getType());
+            paramListDef.add((MJClass)sym.getType());
         }
         return paramListDef;
     }
@@ -123,5 +131,38 @@ public class MJMethod extends MJSymbol implements Scope, Returnable {
     public Set<MJSymbol> getInitializedVariables()
     {
         return new HashSet<>(this.initializedVars.values());
+    }
+
+    public String getFullName() {
+        String fullName = this.getType().toString() + " ";
+        fullName += name;
+        fullName = fullName.substring(0, fullName.length()-1);
+        boolean hasParameter = false;
+        for(MJSymbol parameter : parameterList.values()){
+            fullName += parameter.getType().getName() + ", ";
+            hasParameter=true;
+        }
+        if(hasParameter){
+            fullName = fullName.substring(0, fullName.length()-2);
+        }
+        fullName += ")";
+        return fullName;
+    }
+
+    @Override
+    public String toString()
+    {
+        return name;
+    }
+
+    @Override
+    public Type getAsmType()
+    {
+        return null;
+    }
+
+    public org.objectweb.asm.commons.Method getAsmMethod(){
+        return org.objectweb.asm.commons.Method.getMethod(this.getFullName(), true);
+
     }
 }

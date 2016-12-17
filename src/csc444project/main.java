@@ -12,7 +12,8 @@ import java.util.HashMap;
 import java.util.Map;
 
 
-public class main {
+final public class main
+{
 
     static String FILE_NAME;
 
@@ -39,21 +40,41 @@ public class main {
         }
     }
 
+    /*
+        Main method
+     */
 
 
-    public static void main(String[] args) {
+    public static void main(String[] args)
+    {
+        for (String workingFileName : FILE_NAMES)
+        {
+            FILE_NAME = workingFileName;
+            runForFileName(workingFileName);
+        }
 
+        System.out.println("Program complete...");
+
+    }
+
+    /*
+        Does all of the dirty work...
+     */
+
+    private static void runForFileName(String fileName)
+    {
         FileInputStream fis = null;
         ANTLRInputStream inStream = null;
         mjgrammarLexer lexer;
 
-        try {
-            FILE_NAME = FILE_NAMES[7];
-            System.out.println("Chosen file: " + FILE_NAME );
-            fis = new FileInputStream(FILE_NAME);
+        try
+        {
+            System.out.println("Running File: " + fileName);
+            fis = new FileInputStream(fileName);
             inStream = new ANTLRInputStream(fis);
-        } catch (IOException ex) {
-            System.out.println("IO Error");
+        } catch (IOException ex)
+        {
+            System.out.println("IO Error: See stack trace");
             ex.printStackTrace();
         }
 
@@ -101,9 +122,6 @@ public class main {
         CodeGenerator codeGen = new CodeGenerator(parser, classMap, masterScopeList, callerList);
 
         ParseTreeWalker.DEFAULT.walk(codeGen, tree);
-
-        System.out.println("Program complete...");
-
     }
 
 }

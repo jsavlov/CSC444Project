@@ -47,7 +47,21 @@ final public class main
 
     public static void main(String[] args)
     {
-        for (String workingFileName : FILE_NAMES)
+        String[] fileNames;
+
+        if (args.length != 0)
+        {
+            System.out.println("File names given as a runtime argument...");
+            fileNames = args;
+        }
+        else
+        {
+            System.out.println("Using hardcoded filenames...");
+            fileNames = FILE_NAMES;
+        }
+
+
+        for (String workingFileName : fileNames)
         {
             FILE_NAME = workingFileName;
             runForFileName(workingFileName);

@@ -17,7 +17,8 @@ final public class main
 
     static String FILE_NAME;
 
-    static final String FILE_DIR = "/Users/jason/minijava_samples/";
+    //static final String FILE_DIR = "/Users/jason/minijava_samples/";
+    static final String FILE_DIR = "minijava_analysis/java_source_files/";
 
     static String[] FILE_NAMES = {
             "Factorial.java",

@@ -141,6 +141,6 @@ public class MJClass implements Scope, Returnable, Comparable
             throw new Error("Comparison error with MJClass...");
         }
 
-        return ((MJClass) o).getName().compareTo(this.getName());
+        return (this.getName().compareTo(((MJClass) o).getName()));
     }
 }
